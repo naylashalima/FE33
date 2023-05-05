@@ -55,6 +55,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.form-wrap form .submit-button {
+    text-align: center;
+}
+
 .form-wrap form .submit-button button.button {
     padding: 13px 30px;
     background-color: greenyellow;
