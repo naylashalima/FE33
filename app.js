@@ -26,3 +26,24 @@ submit_button.onclick = (e) => {
         }
     }
 }
+
+const login = document.querySelector(".login");
+login.onclick = (e) => {
+    e.preventDefault();
+
+    const emailAddress = document.getElementById("emailAddress").value;
+    const passWord = document.getElementById("passWord").value;
+
+    const Email = localStorage.getItem("Email");
+    const Password = localStorage.getItem("Password");
+
+    if( emailAddress == "" && passWord == "") {
+        swal("Opps..!", "Kolom Harus Diisi", "error");
+    }else{
+        if(emailAddress == Email && passWord == Password){
+            swal("Good job!", "Login Berhasil!", "success");
+        }else{
+            swal("Opps..!", "Sepertinya ada yang salah", "error");
+        }
+    }
+}
