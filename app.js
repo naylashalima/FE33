@@ -51,7 +51,7 @@ login.onclick = (e) => {
                 location.href = 'https://www.google.com';
             },1000)
         }else{
-            swal('Opps..!', 'Eamil atau Password yang anda masukan salah!', 'error')
+            swal('Opps..!', 'Email atau Password yang anda masukan salah!', 'error')
         }
     }
 }
