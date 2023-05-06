@@ -85,28 +85,30 @@
       var response = axios.get(myUrl, {
         headers: {
           'Content-Type': 'application/json'
-        }
-        // other configuration there
-      })
+        }})
       .then(function (response) {
         console.log(response);
-        for (let i = 0; i < response.data.length; i ++) {
-        //create a DOM element
-        if (response.data[i].carousel == true){
+        for (let i = 0; i < response.data.length; i ++) {        
+          if (response.data[i].carousel == true){
           var divCarousel = 
-          `<div class="carousel-item ${(i == 0)?"active": ""}">
-                    <div class="row pt-2">
-                        <img src="assets/cover_1.jpg" alt="foto" id="imgCarousel">
-                        <div class="mt-2 mt-sm-0 col-sm">
-                            <h2>${response.data[i].title}</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur nulla sint</p>
-                            <a href="detail.html?id=${response.data[i].id}">selengkapnya</a>
-                        </div>
-                    </div>
-                  </div>` 
-                  $('#carouselArticle').append(divCarousel);
+          `<div class="carousel-item ${(i == 0)?"active": ""}" id="carouselItem">
+              <div class="row pt-2">
+                <img src="assets/cover_1.jpg" alt="foto" id="imgCarousel">
+                  <div class="mt-2 mt-sm-0 col-sm">
+                    <h2>${response.data[i].title}</h2>
+                    <p id="carouselDescription">${response.data[i].description}</p>
+                    <a href="detail.html?id=${response.data[i].id}">selengkapnya</a>
+                  </div>
+              </div>
+            </div>` 
+          $('#carouselArticle').append(divCarousel);
         }
-        var div = `<div class="col-sm mb-4"><img src="assets/${response.data[i].pathGambar}" alt="" class="" id="imgArtikel"><h2 class="mb-0">${response.data[i].title}</h2><a href="">selengkapnya</a></div>`
+        var div = 
+          `<div class="col-5 col-sm mb-4">
+            <img src="assets/${response.data[i].pathGambar}" alt="" class="" id="imgArtikel">
+            <h2 class="mb-0" id="cardArticleTitle">${response.data[i].title}</h2>
+            <a href="detail.html?id=${response.data[i].id}">selengkapnya</a>
+          </div>`
         $('#cardArticle').append(div);
     } 
       })

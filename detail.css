@@ -1,0 +1,26 @@
+@media screen and (max-width: 400px){
+    #logo{
+        width: 80px;
+        height: 80px;
+    }
+    #imgChallange{
+        width: 80px;
+        height: 80px;
+    }
+}
+@media screen and (min-width: 500px){
+    #logo{
+        width: 80px;
+        height: 80px;
+    }
+    #imgChallange{
+        width: 80px;
+        height: 80px;
+    }
+    #imgArticle{
+        height: 350px;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
