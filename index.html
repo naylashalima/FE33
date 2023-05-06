@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"/>
   </head>
   <body>
@@ -23,7 +24,7 @@
               <a class="nav-link" href="#">Tracking</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Artikel</a>
+              <a class="nav-link" href="artikel.html">Artikel</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -32,25 +33,25 @@
               Search
             </button>
           </form>
-          <button class="btn btn-outline-success ms-sm-2 " type="submit">
+          <button class="btn btn-outline-success mt-2 mt-sm-0 ms-sm-2 " type="submit">
             Sign Up
           </button>
         </div>
       </div>
     </nav>
-    <section class="py-5" style="background-color: #10B253;">
+    <section class="py-3 py-sm-5" style="background-color: #10B253;">
       <div class="container py-5">
-        <div class="row">
+        <div class="d-flex flex-column-reverse flex-sm-row ">
           <div class="col-sm py-lg-5">
-            <h1>Membantu menjaga kalori</h1>
-            <h1>Demi Kesehatan tubuh</h1>
+            <h1>Membantu menjaga kalori
+            Demi Kesehatan tubuh</h1>
             <p>Program diet ini hadir untuk membantu setiap orang
               untuk menjaga kesehatan mereka berdasarkan 
               makanan yang mereka konsumsi</p>
-            <button> Join Us</button>
+            <a href="artikel.html" class="btn btn-light text-success">Join Us</a>
           </div>
           <div class="col-sm">
-            <img src="assets/cover_1.jpg" alt="foto" class="w-75 float-end">
+            <img src="assets/cover_1.jpg" alt="foto" class="w-75 float-sm-end ">
           </div>
         </div>
       </div>
@@ -59,52 +60,67 @@
       <div class="container text-center">
         <div class="row">
           <h2>Hidup Sehat Dengan Gizi Seimbang</h2>
-          <p class="my-1">Gizi seimbang diperlukan tubuh untuk tumbuh, menjaga kesehatan dan </p>
-          <p class="my-1">untuk aktivitas, juga fungsi kehidupan sehari-hari.</p>
+          <p class="my-0 my-sm-1">Gizi seimbang diperlukan tubuh untuk tumbuh, menjaga kesehatan dan </p>
+          <p class="my-0 my-sm-1">untuk aktivitas, juga fungsi kehidupan sehari-hari.</p>
         </div>
         <div class="row">
           <img src="assets/cover_1.jpg" alt="foto" class="w-50 mt-5 rounded mx-auto d-block">
         </div>
       </div>
     </section>
-    <section class="py-5" style="background-color: #10B253;">
+    <section class="py-2 py-sm-5" style="background-color: #10B253;">
       <div class="container py-5">
-        <div class="row">
+        <div class="d-flex flex-column-reverse flex-sm-row ">
           <div class="col py-lg-5">
             <h1>Track Your Calories</h1>
             <p>Mengetahui jumlah kalori makanan yang dikonsumsi dan merupakan hal yang penting bagi kebutuhan tubuh loh!
               Yuk hitung kalori harianmu.</p>
-            <button> Join Us</button>
+            <a href="artikel.html" class="btn btn-light text-success">Join Us</a>
           </div>
           <div class="col">
-            <img src="assets/cover_1.jpg" alt="foto" class="w-75 float-end">
+            <img src="assets/cover_1.jpg" alt="foto" class="w-75 float-sm-end">
           </div>
         </div>
       </div>
     </section>
-    <section class="py-5" style="background-color: #D7FFE3;">
+    <section class="py-3 py-sm-5" style="background-color: #D7FFE3;">
       <div class="container text-center">
         <div class="row">
-          <h2>Hidup Sehat Dengan Gizi Seimbang</h2>
-          <p>Gizi seimbang diperlukan tubuh untuk tumbuh, menjaga kesehatan dan 
-            untuk aktivitas, juga fungsi kehidupan sehari-hari.</p>
+          <h2>Layanan Kami</h2>
+          <p>Program Diet hadir menjadi solusi untuk anda</p>
         </div>
       </div>
       <div class="row mx-lg-5 my-lg-2">
-        <div class="col text-center">
+        <div class="col-sm text-center">
           <img src="assets/cover_1.jpg" class="w-50" alt="foto">
-          <h3>fitur 1</h3>
+          <h3>Tracking Calories</h3>
         </div>
-        <div class="col text-center">
+        <div class="col-sm text-center">
           <img src="assets/cover_1.jpg" class="w-50" alt="foto">
-          <h3>fitur 1</h3>
+          <h3>Food Recomendation</h3>
         </div>
-        <div class="col text-center">
+        <div class="col-sm text-center">
           <img src="assets/cover_1.jpg" class="w-50" alt="foto">
-          <h3>fitur 1</h3>
+          <h3>Carbon Offset</h3>
         </div>
       </div>
     </section>
+    <footer class="mx-0" style="background-color: #048853;">
+      <div class="row py-2 px-2 mx-sm-5 px-sm-5 text-light">
+        <div class="col-sm mt-3">
+          <img src="assets/cover_1.jpg" alt="logo" id="logo">
+        </div>
+        <div class="col-sm mt-3">
+          <h3>About Us</h3>
+          <p>Platform yang menyediakan layanan artikel, rekomendasi makanan dan tracking diet untuk menunjang kesehatan</p>
+        </div>
+        <div class="col-sm mt-3">
+          <h3>Challange Partner</h3>
+          <img src="assets/cover_1.jpg" alt="foto" id="imgChallange" class="me-3">
+          <img src="assets/cover_1.jpg" alt="foto" id="imgChallange">
+        </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"
     ></script>
   </body>

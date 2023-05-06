@@ -1,0 +1,20 @@
+@media screen and (max-width: 400px){
+    #imgChallange{
+        width: 80px;
+        height: 80px;
+    }
+    #logo{
+        width: 80px;
+        height: 80px;
+    }
+}
+@media screen and (min-width: 500px){
+    #imgChallange{
+        width: 80px;
+        height: 80px;
+    }
+    #logo{
+        width: 80px;
+        height: 80px;
+    }
+}

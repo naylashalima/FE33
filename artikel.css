@@ -1,0 +1,40 @@
+@media screen and (max-width: 400px){
+    #imgCarousel{
+        width: 500px;
+        height: 200px;
+    }
+    #logo{
+        width: 80px;
+        height: 80px;
+    }
+    #imgChallange{
+        width: 80px;
+        height: 80px;
+    }
+    #imgArtikel{
+        width: 150px;
+        height: 160px;
+    }
+}
+@media screen and (min-width: 500px){
+    #imgCarousel{
+        width: 500px;
+        height: 430px;
+    }
+    #logo{
+        width: 80px;
+        height: 80px;
+    }
+    #imgChallange{
+        width: 80px;
+        height: 80px;
+    }
+    #imgArtikel{
+        width: 240px;
+        height: 160px;
+    }
+    hr{
+        margin-right: 80px;
+        margin-left: 80px;
+    }
+}
