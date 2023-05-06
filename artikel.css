@@ -1,3 +1,7 @@
+#logoNav{
+    height: 50px;
+    width: 100px;
+}
 #cardArticleTitle{
     font-size: medium;
     overflow: hidden;
@@ -16,6 +20,10 @@
         width: 80px;
         height: 80px;
     }
+    #logo{
+        width: 200px;
+        height: 80px;
+    }
     #imgArtikel{
         width: 150px;
         height: 160px;
@@ -31,13 +39,13 @@
         width: 500px;
         height: 430px;
     }
-    #logo{
-        width: 80px;
+    #imgChallange{
+        width: 100px;
         height: 80px;
     }
-    #imgChallange{
-        width: 80px;
-        height: 80px;
+    #logo{
+        width: 240px;
+        height: 100px;
     }
     #imgArtikel{
         width: 240px;
