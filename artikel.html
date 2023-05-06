@@ -42,37 +42,7 @@
     <section class="py-5" style="background-color: #F2FFFA;">
         <div class="container shadow">
             <div id="carouselExample" class="carousel slide">
-                <div class="carousel-inner" style="height: 450px;">
-                  <div class="carousel-item active">
-                    <div class="row pt-2">
-                        <img src="assets/cover_1.jpg" alt="foto" id="imgCarousel">
-                        <div class="mt-2 mt-sm-0 col-sm">
-                            <h2>Judul Artikel</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur nulla sint</p>
-                            <a href="">selengkapnya</a>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row pt-2">
-                        <img src="assets/picture.png"  alt="foto" id="imgCarousel">
-                        <div class="mt-2 mt-sm-0 col-sm">
-                            <h2>Judul Artikel</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur nulla sint</p>
-                            <a href="">selengkapnya</a>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row pt-2">
-                        <img src="assets/cover_1.jpg"  alt="foto" id="imgCarousel">
-                        <div class="mt-2 mt-sm-0 col-sm">
-                            <h2>Judul Artikel</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur nulla sint</p>
-                            <a href="">selengkapnya</a>
-                        </div>
-                    </div>
-                  </div>
+                <div class="carousel-inner" style="height: 450px;" id="carouselArticle">
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
@@ -87,27 +57,7 @@
     </section>
     <hr>
     <section class="container">
-        <div class="d-flex flex-wrap justify-content-evenly py-5">
-            <div class="col-sm mb-4">
-                <img src="assets/cover_1.jpg" alt="" class="" id="imgArtikel">
-                <h2 class="mb-0">title 1 title</h2>
-                <a href="">selengkapnya</a>
-            </div>
-            <div class="col-sm mb-4">
-              <img src="assets/cover_1.jpg" alt="" class="" id="imgArtikel">
-              <h2 class="mb-0">title 1 title</h2>
-              <a href="">selengkapnya</a>
-            </div>
-            <div class="col-sm mb-4">
-              <img src="assets/cover_1.jpg" alt="" class="" id="imgArtikel">
-              <h2 class="mb-0">title 1 title</h2>
-              <a href="">selengkapnya</a>
-            </div>
-            <div class="col-sm mb-4">
-              <img src="assets/cover_1.jpg" alt="" class="" id="imgArtikel">
-              <h2 class="mb-0">title 1 title</h2>
-              <a href="">selengkapnya</a>
-            </div>
+        <div class="d-flex flex-wrap justify-content-evenly py-5" id="cardArticle">
         </div>
     </section>
     <footer class="mx-0" style="background-color: #048853;">
@@ -127,5 +77,44 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var data = []
+      var myUrl = "https://64550599a74f994b334fc3e6.mockapi.io/article"
+      var response = axios.get(myUrl, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+        // other configuration there
+      })
+      .then(function (response) {
+        console.log(response);
+        for (let i = 0; i < response.data.length; i ++) {
+        //create a DOM element
+        if (response.data[i].carousel == true){
+          var divCarousel = 
+          `<div class="carousel-item ${(i == 0)?"active": ""}">
+                    <div class="row pt-2">
+                        <img src="assets/cover_1.jpg" alt="foto" id="imgCarousel">
+                        <div class="mt-2 mt-sm-0 col-sm">
+                            <h2>${response.data[i].title}</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur nulla sint</p>
+                            <a href="detail.html?id=${response.data[i].id}">selengkapnya</a>
+                        </div>
+                    </div>
+                  </div>` 
+                  $('#carouselArticle').append(divCarousel);
+        }
+        var div = `<div class="col-sm mb-4"><img src="assets/${response.data[i].pathGambar}" alt="" class="" id="imgArtikel"><h2 class="mb-0">${response.data[i].title}</h2><a href="">selengkapnya</a></div>`
+        $('#cardArticle').append(div);
+    } 
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+    ;
+    console.log(response)
+    </script>
 </body>
 </html>
