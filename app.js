@@ -48,7 +48,7 @@ login.onclick = (e) => {
         if(emailAddress == Email && passWord == Password) {
             swal('Good job!', 'Login Berhasil!', 'success');
             setTimeout(()=>{
-                location.href = 'https://www.google.com';
+                location.href = 'index.html';
             },1000)
         }else{
             swal('Opps..!', 'Email atau Password yang anda masukan salah!', 'error')
