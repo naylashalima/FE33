@@ -91,7 +91,7 @@
           var divCarousel = 
           `<div class="carousel-item ${(i == 0)?"active": ""}" id="carouselItem">
               <div class="row pt-2">
-                <img src="assets/cover_1.jpg" alt="foto" id="imgCarousel">
+                <img src="assets/${response.data[i].pathGambar}.png" alt="foto" id="imgCarousel">
                   <div class="mt-2 mt-sm-0 col-sm">
                     <h2>${response.data[i].title}</h2>
                     <p id="carouselDescription">${response.data[i].description}</p>
@@ -103,7 +103,7 @@
         }
         var div = 
           `<div class="col-5 col-sm mb-4">
-            <img src="assets/${response.data[i].pathGambar}" alt="" class="" id="imgArtikel">
+            <img src="assets/${response.data[i].pathGambar}.png" alt="" class="" id="imgArtikel">
             <h2 class="mb-0" id="cardArticleTitle">${response.data[i].title}</h2>
             <a href="detail.html?id=${response.data[i].id}">selengkapnya</a>
           </div>`
